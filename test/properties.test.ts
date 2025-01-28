@@ -9,6 +9,10 @@ describe("properties", () => {
             this.id = id
             this.name = name
         }
+
+        sayHello(name: String): void {
+            console.info(`Hello ${name}, my name is ${this.name}`) 
+        }
     }
 
     it('should can have properties', () => {
@@ -18,5 +22,12 @@ describe("properties", () => {
 
         console.info(customer)
 
+    });
+
+    it('should can have method', () => {
+        const customer:Customer = new Customer("id", "Ammar")
+        customer.age = 21
+
+        customer.sayHello("Latif")
     });
 } )
