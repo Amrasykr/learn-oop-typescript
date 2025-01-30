@@ -1,5 +1,3 @@
-import {DepGraphInfo} from "ts-jest";
-
 describe('Inheritance', () => {
 
     class Person {
