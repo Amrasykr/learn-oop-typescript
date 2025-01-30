@@ -10,7 +10,15 @@ describe('Polymorphism', () => {
     class VicePrecident extends Manager{}
 
     const sayHello = (employee: Employee): void => {
-        console.info(`Hello ${employee.name}`)
+        if (employee instanceof VicePrecident){
+            const vp = employee as VicePrecident
+            console.info(`Hello Vice President ${vp.name}`)
+        }else if (employee instanceof Manager){
+            const manager = employee as Manager
+            console.info(`Hello manager ${manager.name}`)
+        } else {
+            console.info(`Hello employee ${employee.name}`)
+        }
     }
 
     it('should support', () => {
